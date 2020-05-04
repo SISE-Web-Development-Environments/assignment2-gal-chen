@@ -646,30 +646,34 @@ function drawMonster(index, x, y) {
 	context.drawImage(monsters[index].img, x, y, canvas.width / 10, canvas.height / 10);
 }
 
-function canMoveMonster(mx, my, direction) {
-	if (direction == 1)//up
+function canMoveMonster(mx, my, direction1) {
+	if (direction1 == 1)//up
 	{
 		if (my > 0 && board[mx][my - 1] != 6 && board[mx][my - 1] != 4 && board[mx][my - 1] != 9)//up
 		{
+		
 			return true;
 		}
 	}
-	else if (direction == 2)//down
+	else if (direction1 ==2)//down
 	{
 		if (my < 9 && board[mx][my + 1] != 6 && board[mx][my + 1] != 4 && board[mx][my + 1] != 9) {
+		
 			return true;
 		}
 	}
-	else if (direction == 3)//left
+	else if (direction1 == 3)//left
 	{
 		if (mx > 0 && board[mx - 1][my] != 6 && board[mx - 1][my] != 4 && board[mx - 1][my] != 9) {
+		
 			return true;
 		}
 
 	}
-	else if (direction == 4)//right
+	else if (direction1 == 4)//right
 	{
 		if (mx < 9 && board[mx + 1][my] != 6 && board[mx + 1][my] != 4 && board[mx + 1][my] != 9) {
+		
 			return true;
 		}
 
@@ -682,18 +686,21 @@ function moveMonsterByDistance(mx, my) {
 	let py = pacmenPosition.j;
 	let deltax=mx-px;
 	let deltay=my-py;
+	let direction1=0;
 	if(Math.abs(deltax)>Math.abs(deltay))
 	{
 		if(deltax<0) // move right
 		{
-			if (canMoveMonster(mx, my, 4))//right
+			direction1=4;
+			if (canMoveMonster(mx, my, direction1))//right
 			{
 				return 4;
 			}
 		}
 		else // move left
 		{
-			if (canMoveMonster(mx, my, 3))
+			direction1=3;
+			if (canMoveMonster(mx, my, direction1))
 			{
 				return 3;
 			}
@@ -701,14 +708,16 @@ function moveMonsterByDistance(mx, my) {
 	}
 	if(deltay<0)
 	{
-		if (canMoveMonster(mx.my, 2))
+		direction1=2;
+		if (canMoveMonster(mx.my, direction1))
 		{
 			return 2;
 		}
 	}
 	else 
 	{
-		if (canMoveMonster(mx.my, 1))
+		direction1=1;
+		if (canMoveMonster(mx.my, direction1))
 		{
 			return 1;
 		}
