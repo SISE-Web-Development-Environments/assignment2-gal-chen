@@ -180,9 +180,14 @@ nav{
     width: 32%;
 }
 
+#welcome
+{
+    margin-top: 15%;
+}
+
 .settings
 {
-    margin-top: 5%;
+    margin-top: 8%;
 }
 
 

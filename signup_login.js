@@ -27,7 +27,7 @@ function logFunc()
                 $("#signup").hide();
                 $("#maingame").hide();
                 $("#about").hide();
-                $("#settings").show();
+                settings();
                 alert("You start the game! \n break a leg!");
                 label.textContent="welcome " + userNameLog.value;
                 document.getElementById('userNameLogIn').value=null;
