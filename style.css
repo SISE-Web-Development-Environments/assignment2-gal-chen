@@ -158,8 +158,9 @@ nav{
   {
       float: left;
       margin-left: 12%;
-      margin-top:  2%;
+      margin-top:  3%;
       text-align: left ;
+   
       
   }
   .gs
@@ -169,6 +170,17 @@ nav{
     padding-bottom:2px;
     padding-left: 2x;
     font-size: 13px;
+    font-size: medium;
+  }
+
+  .b1
+  {
+    margin-left: 4px;
+    margin-top:  4px;
+    margin-right:4px;
+    margin-bottom: 4px;
+    width: 60px;
+    height: 35px;
   }
   
 #canvas
@@ -180,9 +192,14 @@ nav{
     width: 32%;
 }
 
-#welcome
+.welcome
 {
     margin-top: 15%;
+}
+
+#welcome
+{
+    margin-top: 20%;
 }
 
 .settings
@@ -338,7 +355,6 @@ form .error {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-
   }
   
   /* The Close Button */
